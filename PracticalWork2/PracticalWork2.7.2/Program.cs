@@ -21,16 +21,18 @@ namespace PracticalWork2._7._2
             programmingPoints = 5.0f;
             mathPoints = 5.0f;
             physicsPoints = 4.0f;
-            totalPoints = programmingPoints + mathPoints + physicsPoints;
-            gpa = totalPoints / 3;
             Console.WriteLine($" ФИО: {fullName}\n" +
                               $" Возраст: {age} лет\n" +
                               $" Email: {email}\n" +
                               $" Баллы по программированию: {programmingPoints}\n" +
                               $" Баллы по математике: {mathPoints}\n" +
-                              $" Баллы по физике: {physicsPoints}\n" +
-                              $" Сумма баллов: {totalPoints}\n" +
-                              $" Средний балл(GPA): {gpa:#.##}\n");
+                              $" Баллы по физике: {physicsPoints}");
+            totalPoints = programmingPoints + mathPoints + physicsPoints;
+            gpa = totalPoints / 3;
+            Console.ReadKey();
+            Console.WriteLine($" Сумма баллов: {totalPoints}\n" +
+                              $" Средний балл: {gpa:#.##}\n");
+
 
             fullName = "Сидоров Сидор Сидорович";
             age = 14;
@@ -45,9 +47,12 @@ namespace PracticalWork2._7._2
                               $" Email: {email}\n" +
                               $" Баллы по программированию: {programmingPoints}\n" +
                               $" Баллы по математике: {mathPoints}\n" +
-                              $" Баллы по физике: {physicsPoints}\n" +
-                              $" Сумма баллов: {totalPoints}\n" +
-                              $" Средний балл(GPA): {gpa:#.##}\n");
+                              $" Баллы по физике: {physicsPoints}");
+            totalPoints = programmingPoints + mathPoints + physicsPoints;
+            gpa = totalPoints / 3;
+            Console.ReadKey();
+            Console.WriteLine($" Сумма баллов: {totalPoints}\n" +
+                              $" Средний балл: {gpa:#.##}\n");
 
             Console.ReadKey();
         }
