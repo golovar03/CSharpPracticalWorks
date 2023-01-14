@@ -1,0 +1,16 @@
+E:\STUDY\C#\PracticalWork3_10_1\bin\Debug\PracticalWork3_10_1.exe.config
+E:\STUDY\C#\PracticalWork3_10_1\bin\Debug\PracticalWork3_10_1.exe
+E:\STUDY\C#\PracticalWork3_10_1\bin\Debug\PracticalWork3_10_1.pdb
+E:\STUDY\C#\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.csproj.AssemblyReference.cache
+E:\STUDY\C#\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.csproj.SuggestedBindingRedirects.cache
+E:\STUDY\C#\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.csproj.CoreCompileInputs.cache
+E:\STUDY\C#\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.exe
+E:\STUDY\C#\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.pdb
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\bin\Debug\PracticalWork3_10_1.exe.config
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\bin\Debug\PracticalWork3_10_1.exe
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\bin\Debug\PracticalWork3_10_1.pdb
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.csproj.AssemblyReference.cache
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.csproj.SuggestedBindingRedirects.cache
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.csproj.CoreCompileInputs.cache
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.exe
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_1\obj\Debug\PracticalWork3_10_1.pdb

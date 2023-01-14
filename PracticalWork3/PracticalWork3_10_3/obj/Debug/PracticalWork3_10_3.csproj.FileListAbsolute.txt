@@ -1,0 +1,8 @@
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\bin\Debug\PracticalWork3_10_3.exe.config
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\bin\Debug\PracticalWork3_10_3.exe
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\bin\Debug\PracticalWork3_10_3.pdb
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\obj\Debug\PracticalWork3_10_3.csproj.AssemblyReference.cache
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\obj\Debug\PracticalWork3_10_3.csproj.SuggestedBindingRedirects.cache
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\obj\Debug\PracticalWork3_10_3.csproj.CoreCompileInputs.cache
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\obj\Debug\PracticalWork3_10_3.exe
+E:\STUDY\C#\PracticalWork3\PracticalWork3_10_3\obj\Debug\PracticalWork3_10_3.pdb
