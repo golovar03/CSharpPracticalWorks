@@ -10,27 +10,43 @@ namespace PracticalWork3_10_4
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите длину последовательности чисел: ");
-            int sequenceLength = int.Parse(Console.ReadLine());
+
             int minNumber = int.MaxValue;
-            if (sequenceLength > 0)
+            while (true)
             {
-                Console.WriteLine($"Теперь введите {sequenceLength} целых чисел. Разделяйте ввод клавишей Enter");
-                for (int i = 1; i <= sequenceLength; i++)
+                Console.Write("Введите длину последовательности чисел: ");
+                string userSequenceLength = Console.ReadLine();
+
+                if ((int.TryParse(userSequenceLength, out int sequenceLength)) && (sequenceLength > 0))
                 {
-                    Console.Write($"{i}-ое число последовательности: ");
-                    int userNumber = int.Parse(Console.ReadLine());
-                    if (userNumber < minNumber)
+                    Console.WriteLine($"Теперь введите {sequenceLength} целых чисел. Разделяйте ввод клавишей Enter");
+                    int i = 1;
+                    while (i <= sequenceLength)
                     {
-                        minNumber = userNumber;
+                        Console.Write($"{i}-ое число последовательности: ");
+                        string userNumber = Console.ReadLine();
+
+                        if (int.TryParse(userNumber, out int convertedUserNumber))
+                        {
+                            if (convertedUserNumber < minNumber)
+                                minNumber = convertedUserNumber;
+                            i++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Вы вели не целое число. Введите корректное число!");
+                        }
                     }
+
+                    Console.WriteLine($"Минимальное число в последовательности из {sequenceLength} элементов:" +
+                        $" {minNumber}");
                 }
-                Console.WriteLine($"Минимальное число в последовательности из {sequenceLength} элементов:" +
-                    $" {minNumber}");
-            }
-            else 
-            {
-                Console.WriteLine("Введите целое положительное число отличное от 0");
+                else
+                {
+                    Console.WriteLine("Введите целое положительное число отличное от 0");
+                    continue;
+                }
+                break;
             }
             Console.ReadKey();
         }

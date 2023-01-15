@@ -6,3 +6,10 @@ E:\STUDY\C#\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.csp
 E:\STUDY\C#\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.csproj.CoreCompileInputs.cache
 E:\STUDY\C#\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.exe
 E:\STUDY\C#\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\bin\Debug\PracticalWork3_10_5.exe.config
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\bin\Debug\PracticalWork3_10_5.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\bin\Debug\PracticalWork3_10_5.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.csproj.AssemblyReference.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.csproj.CoreCompileInputs.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork3\PracticalWork3_10_5\obj\Debug\PracticalWork3_10_5.pdb
