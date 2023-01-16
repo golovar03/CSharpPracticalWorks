@@ -23,9 +23,9 @@ namespace PracticalWork4_1
                     int[,] arrayOfNumbers = new int[numberOfLines, numberOfColumns];
                     Random randomNumber = new Random();
                     int summAllNumbers = 0;
-                    for (int i = 0; i < numberOfLines; i++)
+                    for (int i = 0; i < arrayOfNumbers.GetLength(0); i++)
                     {
-                        for (int j = 0; j < numberOfColumns; j++)
+                        for (int j = 0; j < arrayOfNumbers.GetLength(1); j++)
                         {
                             arrayOfNumbers[i, j] = randomNumber.Next(-9, 10);
                             summAllNumbers += arrayOfNumbers[i, j];

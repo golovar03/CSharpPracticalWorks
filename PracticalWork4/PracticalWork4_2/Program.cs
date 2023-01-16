@@ -73,9 +73,6 @@ namespace PracticalWork4_2
                     Console.WriteLine($"Ошибка. Вы ввели неправильно одно из двух значений. Пожалуйста, повторите ввод данных.\n");
                     continue;
                 }
-
-
-
             }
             Console.ReadKey();
         }
