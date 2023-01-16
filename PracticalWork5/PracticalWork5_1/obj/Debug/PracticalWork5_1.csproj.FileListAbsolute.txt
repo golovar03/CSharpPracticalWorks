@@ -1,0 +1,7 @@
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\bin\Debug\PracticalWork5_1.exe.config
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\bin\Debug\PracticalWork5_1.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\bin\Debug\PracticalWork5_1.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\obj\Debug\PracticalWork5_1.csproj.AssemblyReference.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\obj\Debug\PracticalWork5_1.csproj.CoreCompileInputs.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\obj\Debug\PracticalWork5_1.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork5\PracticalWork5_1\obj\Debug\PracticalWork5_1.pdb
