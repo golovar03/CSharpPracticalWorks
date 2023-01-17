@@ -26,9 +26,7 @@ namespace PracticalWork5_2
             string[] splitPhrase = SplitText(inputPhrase);
             for (int i = 0, j = splitPhrase.Length -1; i < j; i++, j--)
             {
-                string temp = splitPhrase[i];
-                splitPhrase[i] = splitPhrase[j];
-                splitPhrase[j] = temp;
+                (splitPhrase[j], splitPhrase[i]) = (splitPhrase[i], splitPhrase[j]);
             }
             string resultReverse = string.Empty;
             foreach (var item in splitPhrase)
