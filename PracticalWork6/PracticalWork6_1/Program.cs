@@ -82,22 +82,22 @@ namespace testFile
         static string InputData(string inputID)
         {
             string lineOfData;
-            string ID = inputID;
-            Console.WriteLine($"ID: {ID}");
+            string id = inputID;
+            Console.WriteLine($"ID: {id}");
             string dateOfLine = DateTime.Now.ToString();
             Console.WriteLine($"Дата записи: {dateOfLine}");
             Console.Write("ФИО: ");
-            string FIO = Console.ReadLine();
+            string fullnameOfWorker = Console.ReadLine();
             Console.Write("Возраст: ");
-            byte age = byte.Parse(Console.ReadLine());
+            byte ageOfWorker = byte.Parse(Console.ReadLine());
             Console.Write("Рост: ");
-            double height = double.Parse(Console.ReadLine());
+            double heightOfWorker = double.Parse(Console.ReadLine());
             Console.Write("Дата рождения: ");
             string birthday = (DateTime.Parse(Console.ReadLine()).Date).ToShortDateString();
             Console.Write("Место рождения: ");
             string placeOfBirth = Console.ReadLine();
-            lineOfData = (ID + "#" + dateOfLine + "#" + FIO + "#" + age + "#" +
-                          +height + "#" + birthday + "#" + placeOfBirth + "\n");
+            lineOfData = (id + "#" + dateOfLine + "#" + fullnameOfWorker + "#" + ageOfWorker + "#" +
+                          +heightOfWorker + "#" + birthday + "#" + placeOfBirth + "\n");
             return lineOfData;
         }
         /// <summary>
