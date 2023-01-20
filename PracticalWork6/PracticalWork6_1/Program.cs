@@ -13,30 +13,24 @@ namespace testFile
         private const string NAMELINES = "ID:#Дата записи:#ФИО:#Возраст:#Рост:#Дата рождения:#Место рождения:";
         static void Main(string[] args)
         {
-            while (true)
+            string userChoice ="";
+            
+            while (userChoice !="3")
             {
                 Console.WriteLine("Что делаем?\n| 1-Прочитать записи | 2-Добавить сотрудника |" +
-                    " Enter-Выход их программы |");
-                string userChoice = Console.ReadLine();
-                if (File.Exists(PATH))
+                    " 3-Выход из программы |");
+                userChoice = Console.ReadLine();
+                switch (userChoice)
                 {
-                    switch (userChoice)
-                    {
-                        case "1":
-                            ReadDataFromFile();
-                            continue;
-                        case "2":
-                            AddDataToFile();
-                            continue;
-                        default: break;
-                    }
-                    Console.WriteLine("Работа с базой окончена.");
-                    break;
-                }
-                else
-                {
-                    CreateEmptyFile();
-                    continue;
+                    case "1":
+                        ReadDataFromFile();
+                        continue;
+                    case "2":
+                        AddDataToFile();
+                        continue;
+                    case "3": Console.WriteLine("Работа с базой окончена."); 
+                        break;
+                    default: continue;
                 }
             }
             Console.ReadKey();
@@ -47,10 +41,10 @@ namespace testFile
             ConsoleKeyInfo key = Console.ReadKey(true);
             if (key.Key != ConsoleKey.Escape)
             {
-                string ID = GetID();
+                string id = GetID();
                 using (FileStream createOrRead = new FileStream(PATH, FileMode.Append))
                 {
-                    byte[] info = new UTF8Encoding(true).GetBytes(InputData(ID));
+                    byte[] info = new UTF8Encoding(true).GetBytes(InputData(id));
                     createOrRead.Write(info, 0, info.Length);
                 }
                 Console.WriteLine("Данные внесены.\n");
@@ -58,25 +52,26 @@ namespace testFile
         }
         static void ReadDataFromFile()
         {
-            string[] lines = NAMELINES.Split('#');
-            using (StreamReader readFile = File.OpenText(PATH))
+            if (File.Exists(PATH))
             {
-                string s;
-                while ((s = readFile.ReadLine()) != null)
+                string[] lines = NAMELINES.Split('#');
+                using (StreamReader readFile = File.OpenText(PATH))
                 {
-                    string[] parse = s.Split('#');
-                    for (int i = 0; i < parse.Length; i++)
+                    string correntLine;
+                    while ((correntLine = readFile.ReadLine()) != null)
                     {
-                        for (int j = 0; j < lines.Length; j++)
+                        string[] parseString = correntLine.Split('#');
+                        for (int i = 0; i < parseString.Length; i++)
                         {
-                            if (i == j)
-                            {
-                                Console.WriteLine(lines[j] + " " + parse[i]);
-                            }
+                            Console.WriteLine(lines[i] + " " + parseString[i]);
                         }
+                        Console.WriteLine();
                     }
-                    Console.WriteLine();
                 }
+            }
+            else
+            {
+                Console.WriteLine($"Файл {PATH} не был найден.");
             }
         }
         static string InputData(string inputID)
@@ -104,30 +99,28 @@ namespace testFile
         /// Метод пробегает по файлу, ищет символ перевода строки, после этого увеличивает значение
         /// linesCount на единицу. Когда все строки посчитаны, передает итоговое значение linesCount
         /// в переменную string ID метода AddDataToFile(), тем самым присваивая значение ID новой записи, 
-        /// равное значению ID предыдущей записи +1 (простой счетчик).
+        /// равное значению ID предыдущей записи +1 (простой счетчик) Если файл не найден, возвращает ID=1
+        ///  (Первая запись новом созданном файле).
         /// </summary>
         /// <returns></returns>
         static string GetID()
         {
             var linesCount = 1;
             int nextLine = '\n';
-            using (var streamReader = new StreamReader(
-                new BufferedStream(
-                    File.OpenRead(PATH), 10 * 1024 * 1024))) // буфер в 10 мегабайт
-            {
-                while (!streamReader.EndOfStream)
+            if (File.Exists(PATH))
                 {
-                    if (streamReader.Read() == nextLine) linesCount++;
+                using (var streamReader = new StreamReader(
+                    new BufferedStream(
+                        File.OpenRead(PATH), 1 * 1024 * 1024))) // буфер в 1 мегабайт
+                {
+                    while (!streamReader.EndOfStream)
+                    {
+                        if (streamReader.Read() == nextLine) linesCount++;
+                    }
                 }
+                return linesCount.ToString();
             }
-            return linesCount.ToString();
-        }
-        static void CreateEmptyFile()
-        {
-            using (FileStream createFile = new FileStream(PATH, FileMode.Create))
-            {
-            }
-            Console.WriteLine($"Файл не был найден. Был создан новый пустой файл: {PATH}");
+            else return linesCount.ToString();
         }
     }
 }
