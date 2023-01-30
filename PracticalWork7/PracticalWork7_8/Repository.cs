@@ -20,15 +20,15 @@ namespace PracticalWork7_8
             this.path = Path;
             this.index = 0;
             this.titles = new string[2];
-            this.workers = new Worker[1];
+            this.workers = new Worker[2];
             //this.Load();
         }
 
         public void Load(string path)
         {
-            if (File.Exists(this.path))
+            if (File.Exists(path))
             {
-                using (StreamReader sr = new StreamReader(this.path))
+                using (StreamReader sr = new StreamReader(path))
                 {
                     titles = sr.ReadLine().Split(',');
                     while (!sr.EndOfStream)
@@ -40,12 +40,11 @@ namespace PracticalWork7_8
             }
             else
             {
-                using (StreamReader sr = new StreamReader(this.path))
+                using (StreamWriter sw = File.AppendText(path))
                 {
-                    File.Create(this.path);
+                    sw.WriteLine("ID,FIO");
                 }
             }
-
         }
 
         private void Resize(bool flag)
@@ -58,15 +57,32 @@ namespace PracticalWork7_8
 
         public void Add(Worker concreteWorker)
         {
+            string titles = String.Format("{0},{1}", "ID", "FIO");
             this.Resize(index >= this.workers.Length);
             this.workers[index] = concreteWorker;
+            string inputData = String.Format("{0},{1}", "\n" + this.workers[index].ID, this.workers[index].FullName);
+            if (File.Exists(path))
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                {
+                    sw.Write(inputData);
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                {
+                    sw.Write(titles);
+                    sw.Write(inputData);
+                }
+            }
             this.index++;
         }
 
         public uint CountLineInFile(string Path)
         {
             uint linesCount = 1;
-            if (File.Exists(this.path))
+            if (File.Exists(path))
             {
                 int nextLine = '\n';
                 using (var streamReader = new StreamReader(
@@ -92,12 +108,6 @@ namespace PracticalWork7_8
                                       this.workers[i].FullName);
                 File.AppendAllText(Path, $"{temp}\n");
             }
-            titles[0] = "ID";
-            titles[1] = "Фамилия Имя Отчество"; 
-            temp = String.Format("{0},{1}",
-                                            this.titles[0],
-                                            this.titles[1]);
-            File.AppendAllText(Path, $"{temp}\n");
         }
     }
 }

@@ -17,12 +17,12 @@ namespace PracticalWork7_8
             this.fullname = FullName;
         }
 
-        public uint ID { get { return this.id; } set { this.id = value; } }
+        public uint ID { get { return id; } private set {  id = value; } }
         public string FullName { get { return this.fullname;} set { this.fullname = value; } }
 
         public string Print()
         {
-            return $"{this.id,15} {this.fullname,15}";
+            return $"{id,15} {fullname,15}";
         }
         
     }
