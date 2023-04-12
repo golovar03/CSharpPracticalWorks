@@ -21,20 +21,29 @@ namespace PracticalWork7_8
             this.index = 0;
             this.titles = new string[2];
             this.workers = new Worker[2];
-            //this.Load();
+            
         }
 
-        public void Load(string path)
+        public void PrintAllWorkers(string path)
         {
             if (File.Exists(path))
             {
                 using (StreamReader sr = new StreamReader(path))
                 {
                     titles = sr.ReadLine().Split(',');
+                    for (int i = 0; i < titles.Length; i++)
+                    {
+                        Console.Write($"{titles[i]}  ");
+                    }
+                    Console.WriteLine();
                     while (!sr.EndOfStream)
                     {
                         string[] args = sr.ReadLine().Split(',');
-                        Add(new Worker(Convert.ToUInt32(args[0]), args[1]));
+                        for (int i = 0; i < args.Length; i++)
+                        {
+                            Console.Write($"{args[i]}  ");
+                        }
+                        Console.WriteLine();
                     }
                 }
             }
@@ -42,7 +51,7 @@ namespace PracticalWork7_8
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
-                    sw.WriteLine("ID,FIO");
+                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст");
                 }
             }
         }
@@ -57,10 +66,10 @@ namespace PracticalWork7_8
 
         public void Add(Worker concreteWorker)
         {
-            string titles = String.Format("{0},{1}", "ID", "FIO");
+            string titles = String.Format("{0},{1},{2},{3}", "ID", "ФИО", "Дата рождения", "Возраст");
             this.Resize(index >= this.workers.Length);
             this.workers[index] = concreteWorker;
-            string inputData = String.Format("{0},{1}", "\n" + this.workers[index].ID, this.workers[index].FullName);
+            string inputData = String.Format("{0},{1},{2},{3}", "\n" + this.workers[index].ID, this.workers[index].FullName, this.workers[index].DateOfBirth, this.workers[index].Age);
             if (File.Exists(path))
             {
                 using (StreamWriter sw = File.AppendText(path))
@@ -70,7 +79,7 @@ namespace PracticalWork7_8
             }
             else
             {
-                using (StreamWriter sw = File.AppendText(path))
+                using (StreamWriter sw = new StreamWriter(new FileStream(path, FileMode.Create), Encoding.UTF8))//File.AppendText(path))
                 {
                     sw.Write(titles);
                     sw.Write(inputData);
@@ -103,9 +112,12 @@ namespace PracticalWork7_8
             string temp;
             for (int i = 0; i < this.index; i++)
             {
-                temp = String.Format("{0},{1}",
+                temp = String.Format("{0},{1},{2},{3}",
                                       this.workers[i].ID,
-                                      this.workers[i].FullName);
+                                      this.workers[i].FullName,
+                                      this.workers[i].DateOfBirth,
+                                      this.workers[i].Age
+                                      );
                 File.AppendAllText(Path, $"{temp}\n");
             }
         }
