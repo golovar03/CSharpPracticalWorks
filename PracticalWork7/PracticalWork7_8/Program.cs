@@ -13,24 +13,39 @@ namespace PracticalWork7_8
         static Repository reposit = new Repository(path);
         static void Main(string[] args)
         {
-            int codeOfOperation = -1;
+            string codeOfOperation = "waitCode";
             Console.WriteLine("0 - Выход, 1: Добавить сотрудника, 2: Вывести все записи, 3: Поиск по ID, 4: Удалить запись по ID");
-            while (codeOfOperation != 0)
+            while (codeOfOperation != "0")
             {
                 Console.Write("Введите команду: ");
-                codeOfOperation = int.Parse(Console.ReadLine());
-                switch (codeOfOperation)
+                codeOfOperation = Console.ReadLine();
+                bool success = int.TryParse(codeOfOperation, out _);
+                if (success)
                 {
-                    case 0: Console.WriteLine("Работа с приложением завершена");
-                        break;
-                    case 1: CreateWorkwer();
-                        break;
-                    case 2: reposit.PrintAllWorkers(path);
-                        break;
+                    switch (Convert.ToInt32(codeOfOperation))
+                    {
+                        case 0:
+                            Console.WriteLine("Работа с приложением завершена");
+                            break;
+                        case 1:
+                            Console.WriteLine("Добавить сотрудника:");
+                            CreateWorkwer();
+                            break;
+                        case 2:
+                            Console.WriteLine("Вывести все записи: ");
+                            reposit.PrintAllWorkers(path);
+                            break;
+                        default:
+                            Console.WriteLine("Такой команды нет");
+                            break;
+                    }
                 }
-                continue;
+                else
+                {
+                    Console.WriteLine("Ошибка ввода команды!");
+                }
             }
-            Console.ReadKey();         
+            Console.ReadKey();
         }
         static void CreateWorkwer()
         {

@@ -14,16 +14,13 @@ namespace PracticalWork7_8
         private string path;
         int index;
         string[] titles;
-
         public Repository(string Path)
         {
             this.path = Path;
             this.index = 0;
             this.titles = new string[2];
             this.workers = new Worker[2];
-            
         }
-
         public void PrintAllWorkers(string path)
         {
             if (File.Exists(path))
