@@ -104,19 +104,69 @@ namespace PracticalWork7_8
             return linesCount;
         }
 
-        public void Save(string Path)
+        public void SearchWorker(string Path, string param)
         {
-            string temp;
-            for (int i = 0; i < this.index; i++)
+
+            if (File.Exists(path))
             {
-                temp = String.Format("{0},{1},{2},{3}",
-                                      this.workers[i].ID,
-                                      this.workers[i].FullName,
-                                      this.workers[i].DateOfBirth,
-                                      this.workers[i].Age
-                                      );
-                File.AppendAllText(Path, $"{temp}\n");
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    titles = sr.ReadLine().Split(',');
+                    for (int i = 0; i < titles.Length; i++)
+                    {
+                        Console.Write($"{titles[i]}  ");
+                    }
+                    Console.WriteLine();
+                    while (!sr.EndOfStream)
+                    {
+                        string[] args = sr.ReadLine().Split(',');
+                        for (int i = 0; i < args.Length; i++)
+                        {
+                            for (int j = 0; j < this.workers.Length; j++)
+                            {
+                                this.workers[index].ID = args[0];
+                                this.workers[index].FullName = args[1];
+                                this.workers[index].DateOfBirth = DateTime.Parse(args[2]);
+                                this.workers[index].Age = Convert.ToInt32(args[3]);
+                            }
+                            //Console.Write($"{args[i]}  ");
+                        }
+                        foreach (Worker worker in this.workers)
+                        {
+                            if (worker.FullName == param)
+                            {
+                                worker.Print(worker);
+                                break;
+
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                {
+                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст");
+                }
             }
         }
+
     }
 }
+
+    //public void Save(string Path)
+    //{
+    //    string temp;
+    //    for (int i = 0; i < this.index; i++)
+    //    {
+    //        temp = String.Format("{0},{1},{2},{3}",
+    //                              this.workers[i].ID,
+    //                              this.workers[i].FullName,
+    //                              this.workers[i].DateOfBirth,
+    //                              this.workers[i].Age
+    //                              );
+    //        File.AppendAllText(Path, $"{temp}\n");
+    //    }
+    //}
+
