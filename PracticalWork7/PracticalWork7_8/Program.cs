@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -14,9 +15,10 @@ namespace PracticalWork7_8
         static Repository reposit = new Repository(path);
         static void Main(string[] args)
         {
-            Console.WriteLine("0 - Выход, 1: Добавить сотрудника, 2: Вывести все записи, 3: Поиск по ID, 4: Удалить запись по ID");
+            
             while (codeOfOperation != "0")
             {
+                Console.WriteLine("\n0 - Выход, 1: Добавить сотрудника, 2: Вывести все записи, 3: Поиск сотрудника, 4: Удалить запись по ID\n");
                 Console.Write("Введите команду: ");
                 codeOfOperation = Console.ReadLine();
                 bool success = int.TryParse(codeOfOperation, out _);
@@ -93,7 +95,10 @@ namespace PracticalWork7_8
                         break;
                 }
             }
-
+            else
+            {
+                Console.WriteLine("Ошибка ввода команды!");
+            }
         }
     }
 }

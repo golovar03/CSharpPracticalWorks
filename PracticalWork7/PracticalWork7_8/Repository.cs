@@ -104,10 +104,11 @@ namespace PracticalWork7_8
                         {
                             for (int j = 0; j < this.workers.Length; j++)
                             {
-                                this.workers[index].ID = args[0];
-                                this.workers[index].FullName = args[1];
-                                this.workers[index].DateOfBirth = DateTime.Parse(args[2]);
-                                this.workers[index].Age = Convert.ToInt32(args[3]);
+                                this.workers[j] = new Worker(args[0], args[1], DateTime.Parse(args[2]), Convert.ToInt32(args[3]));
+                                //this.workers[j].ID = args[0];
+                                //this.workers[j].FullName = args[1];
+                                //this.workers[j].DateOfBirth = DateTime.Parse(args[2]);
+                                //this.workers[j].Age = Convert.ToInt32(args[3]);
                             }
                         }
                         foreach (Worker worker in this.workers)
