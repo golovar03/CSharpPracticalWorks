@@ -13,3 +13,11 @@ D:\STUDY\C#\С#SkillBox\PracticalWork7\PracticalWork7_8\obj\Debug\PracticalWork7
 D:\STUDY\C#\С#SkillBox\PracticalWork7\PracticalWork7_8\bin\Debug\PracticalWork7_8.exe.config
 D:\STUDY\C#\С#SkillBox\PracticalWork7\PracticalWork7_8\bin\Debug\PracticalWork7_8.exe
 D:\STUDY\C#\С#SkillBox\PracticalWork7\PracticalWork7_8\bin\Debug\PracticalWork7_8.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\bin\Debug\PracticalWork7_8.exe.config
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\bin\Debug\PracticalWork7_8.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\bin\Debug\PracticalWork7_8.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\obj\Debug\PracticalWork7_8.csproj.AssemblyReference.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\obj\Debug\PracticalWork7_8.csproj.SuggestedBindingRedirects.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\obj\Debug\PracticalWork7_8.csproj.CoreCompileInputs.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\obj\Debug\PracticalWork7_8.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork7\PracticalWork7_8\obj\Debug\PracticalWork7_8.pdb

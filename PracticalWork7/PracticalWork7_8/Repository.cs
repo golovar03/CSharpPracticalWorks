@@ -30,7 +30,7 @@ namespace PracticalWork7_8
                     titles = sr.ReadLine().Split(',');
                     for (int i = 0; i < titles.Length; i++)
                     {
-                        Console.Write($"{titles[i]}  ");
+                        Console.Write("{0,26}", titles[i]);
                     }
                     Console.WriteLine();
                     while (!sr.EndOfStream)
@@ -38,7 +38,7 @@ namespace PracticalWork7_8
                         string[] args = sr.ReadLine().Split(',');
                         for (int i = 0; i < args.Length; i++)
                         {
-                            Console.Write($"{args[i]}  ");
+                            Console.Write("{0,22}",args[i]);
                         }
                         Console.WriteLine();
                     }
@@ -85,28 +85,8 @@ namespace PracticalWork7_8
             this.index++;
         }
 
-        public uint CountLineInFile(string Path)
-        {
-            uint linesCount = 1;
-            if (File.Exists(path))
-            {
-                int nextLine = '\n';
-                using (var streamReader = new StreamReader(
-                    new BufferedStream(
-                        File.OpenRead(Path), 10 * 1024 * 1024))) // буфер в 10 мегабайт
-                {
-                    while (!streamReader.EndOfStream)
-                    {
-                        if (streamReader.Read() == nextLine) linesCount++;
-                    }
-                }
-            }
-            return linesCount;
-        }
-
         public void SearchWorker(string Path, string param)
         {
-
             if (File.Exists(path))
             {
                 using (StreamReader sr = new StreamReader(path))
@@ -114,7 +94,7 @@ namespace PracticalWork7_8
                     titles = sr.ReadLine().Split(',');
                     for (int i = 0; i < titles.Length; i++)
                     {
-                        Console.Write($"{titles[i]}  ");
+                        Console.Write($"{titles[i]}\t");
                     }
                     Console.WriteLine();
                     while (!sr.EndOfStream)
@@ -129,7 +109,6 @@ namespace PracticalWork7_8
                                 this.workers[index].DateOfBirth = DateTime.Parse(args[2]);
                                 this.workers[index].Age = Convert.ToInt32(args[3]);
                             }
-                            //Console.Write($"{args[i]}  ");
                         }
                         foreach (Worker worker in this.workers)
                         {
@@ -137,7 +116,6 @@ namespace PracticalWork7_8
                             {
                                 worker.Print(worker);
                                 break;
-
                             }
                         }
                     }
@@ -147,26 +125,11 @@ namespace PracticalWork7_8
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
-                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст");
+                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст,");
                 }
             }
         }
 
     }
 }
-
-    //public void Save(string Path)
-    //{
-    //    string temp;
-    //    for (int i = 0; i < this.index; i++)
-    //    {
-    //        temp = String.Format("{0},{1},{2},{3}",
-    //                              this.workers[i].ID,
-    //                              this.workers[i].FullName,
-    //                              this.workers[i].DateOfBirth,
-    //                              this.workers[i].Age
-    //                              );
-    //        File.AppendAllText(Path, $"{temp}\n");
-    //    }
-    //}
 
