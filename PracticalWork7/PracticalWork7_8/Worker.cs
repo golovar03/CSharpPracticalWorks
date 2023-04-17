@@ -26,9 +26,9 @@ namespace PracticalWork7_8
             Console.WriteLine($"{worker._id}\t{worker._fullName}\t{worker._dateOfBirth}\t{worker._age}");  
         }
 
-        public string ID { get { return _id; } private set {  _id = value; } }
-        public string FullName { get { return this._fullName; } set { _fullName = value; } }
-        public DateTime DateOfBirth { get { return _dateOfBirth; } set { _dateOfBirth = value; } }
+        public string ID { get { return _id; } }
+        public string FullName { get { return this._fullName; } private set { _fullName = value; } }
+        public DateTime DateOfBirth { get { return _dateOfBirth; } private set { _dateOfBirth = value; } }
         public int Age { get { return _age; } }
 
     }
