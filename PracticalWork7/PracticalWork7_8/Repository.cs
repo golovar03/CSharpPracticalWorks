@@ -11,67 +11,107 @@ namespace PracticalWork7_8
 {
     struct Repository
     {
-        private Worker[] workers;
-        private string path;
-        int index;
-        //string[] titles;
+        private Worker[] _workers;
+        private readonly string _path;
+        private int _index;
+        
         public Repository(string Path)
         {
-            this.path = Path;
-            this.index = 0;
-            //this.titles = new string[4];
-            this.workers = new Worker[2];
+            this._path = Path;
+            this._index = 0;
+            this._workers = new Worker[2];
         }
 
+        public void PrintTitles()
+        {
+            string titles = String.Format("{0,26}{1,28}{2,26}{3,22}{4,15}", "ID", "Дата создания", "ФИО", "Дата рождения", "Возраст");
+            Console.WriteLine(titles);
+        }
         private void Resize(bool flag)
         {
             if (flag)
             {
-                Array.Resize(ref this.workers, this.workers.Length * 2);
+                Array.Resize(ref this._workers, this._workers.Length * 2);
             }
         }
 
         public void Add(Worker concreteWorker)
         {
-            //string titles = String.Format("{0},{1},{2},{3}", "ID", "ФИО", "Дата рождения", "Возраст");
-            this.Resize(index >= this.workers.Length);
-            this.workers[index] = concreteWorker;
-            string inputData = String.Format("{0},{1},{2},{3}", workers[index].ID, workers[index].FullName, workers[index].DateOfBirth, workers[index].Age);
-            if (File.Exists(path))
+            this.Resize(_index >= this._workers.Length);
+            this._workers[_index] = concreteWorker;
+            string inputData = String.Format("{0},{1},{2},{3},{4}", _workers[_index].ID, _workers[_index].CreatedDate, _workers[_index].FullName,
+                                                                    _workers[_index].DateOfBirth.ToString("d"), _workers[_index].Age + "\n");
+            if (File.Exists(_path))
             {
-                using (StreamWriter sw = File.AppendText(path))
+                using (StreamWriter sw = File.AppendText(_path))
                 {
                     sw.Write(inputData);
                 }
             }
             else
             {
-                using (StreamWriter sw = new StreamWriter(new FileStream(path, FileMode.Create), Encoding.UTF8))//File.AppendText(path))
+                using (StreamWriter sw = new StreamWriter(new FileStream(_path, FileMode.Create), Encoding.UTF8))
                 {
-                    //sw.Write(titles);
                     sw.Write(inputData);
                 }
             }
-            this.index++;
+            this._index++;
         }
 
-        public String[,] ParseFile(string Path)
+        public void SearchWorker(string param)
         {
-            int dataLines = CountLines();
-            string[,] data = new string[dataLines, 4];
-            StreamReader sr = null;
-            if (File.Exists(path))
+            bool success = false;
+            if (File.Exists(_path))
             {
-                using (sr = new StreamReader(path))
+                using (var streamReader = new StreamReader(new BufferedStream(File.OpenRead(_path), 10 * 1024 * 1024)))
                 {
-                    while (!sr.EndOfStream)
+                    while (!streamReader.EndOfStream)
                     {
-                        for (int j = 0; j < dataLines; j++)
+                        string[] args = streamReader.ReadLine().Split(',');
                         {
-                            string[] args = sr.ReadLine().Split(',');
                             for (int i = 0; i < args.Length; i++)
                             {
-                                data[j, i] = args[i];
+                                if (args[i].Equals(param))
+                                {
+                                    success = true;
+                                    string printString = String.Format("{0,23}{1,23}{2,23}{3,20}{4,12}", args[0], args[1], args[2], args[3], args[4]);
+                                    Console.WriteLine(printString);
+                                }
+                            }
+                        }
+                    }
+                }
+                if (success == false)
+                {
+                    Console.WriteLine("\nЗапись с указанными параметрами поиска не найдена. Попробуйте изменить параметры.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Файл базы данных не найден или пустой. Добавьте сотрудников в базу!");
+            }
+        }
+
+        public void SearchWorkerByDateToDate(DateTime fromDate, DateTime toDate)
+        {
+            bool success = false;
+            if(File.Exists(_path)) 
+            {
+                using (var streamReader = new StreamReader(new BufferedStream(File.OpenRead(_path), 10 * 1024 * 1024)))
+                {
+                    while (!streamReader.EndOfStream)
+                    {
+                        string[] args = streamReader.ReadLine().Split(',');
+                        {
+                            for (int i = 0; i < args.Length; i++)
+                            {
+                                if (Convert.ToDateTime(args[2]) >= fromDate && Convert.ToDateTime(args[2]) <= toDate)
+                                {
+                                    success = true;
+                                    string printString = String.Format("{0,23}{1,23}{2,23}{3,20}{4,12}", args[0], args[1], args[2], args[3], args[4]);
+                                    Console.WriteLine(printString);
+                                    break;
+                                }
                             }
                         }
                     }
@@ -79,114 +119,72 @@ namespace PracticalWork7_8
             }
             else
             {
-                using (StreamWriter sw = File.AppendText(path))
-                {
-                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст");
-                }
+                Console.WriteLine("Файл базы данных не найден или пустой. Добавьте сотрудников в базу!");
             }
-            return data;
-        }
-
-        public void SearchWorker(string param, string[,] data)
-        {
-            int lines = data.GetLength(0);
-            int columns = data.GetLength(1);
-            bool success = false;
-            for (int i = 0; i < lines; i++)
-            {
-                for (int j = 0; j < columns; j++)
-                {
-                    if (i == 0)
-                    {
-                        Console.Write("{0,26}", data[0, j]);
-                    }
-                    if (data[i, j] == param)
-                    {
-                        Console.WriteLine();
-                        for (j = 0; j < columns; j++)
-                        {
-                            Console.Write("{0,26}", data[i, j]);
-                        }
-                        success = true;
-                    }
-                }
-            }
-            Console.WriteLine();
+            
             if (success == false)
             {
                 Console.WriteLine("\nЗапись с указанными параметрами поиска не найдена. Попробуйте изменить параметры.");
             }
         }
 
-        public void PrintAllWorkers(string[,] data)
+        public void PrintAllWorkers()
         {
-            int lines = data.GetLength(0);
-            int columns = data.GetLength(1);
-            for (int i = 0; i < lines; i++)
+            if (File.Exists(_path))
             {
-                for (int j = 0; j < columns; j++)
+                using (var streamReader = new StreamReader(new BufferedStream(File.OpenRead(_path), 10 * 1024 * 1024)))
                 {
-                    if (j == columns - 1)
+                    while (!streamReader.EndOfStream)
                     {
-                        Console.Write("{0,26}", data[i, j] + "\n");
-                    }
-                    else
-                    {
-                        Console.Write("{0,26}", data[i, j]);
+                        string[] args = streamReader.ReadLine().Split(',');
+                        {
+                            string printString = String.Format("{0,23}{1,23}{2,23}{3,20}{4,12}", args[0], args[1], args[2], args[3], args[4]);
+                            Console.WriteLine(printString);
+                        }
                     }
                 }
             }
+            else
+            {
+                Console.WriteLine("Файл базы данных не найден или пустой. Добавьте сотрудников в базу!");
+            }
         }
-
         public void DeleteWorkerByID(string workerID)
         {
             string searchID = workerID;
             string temp = @"temp.csv";
 
-            if (File.Exists(path))
+            if (File.Exists(_path))
             {
                 using (StreamWriter sw = File.AppendText(temp))
                 {
-                    using (var streamReader = new StreamReader(
-                                                new BufferedStream(
-                                                    File.OpenRead(path), 10 * 1024 * 1024)))
+                    bool fileFinded = false;
+                    using (var streamReader = new StreamReader(new BufferedStream(File.OpenRead(_path), 10 * 1024 * 1024)))
                     {
                         while (!streamReader.EndOfStream)
                         {
                             string[] args = streamReader.ReadLine().Split(',');
-
-                            if (args[0] != searchID)
+                            if (!args[0].Equals(searchID))
                             {
-                                string tempString = String.Format("{0},{1},{2},{3}", args[0], args[1], args[2], args[3]);
+                                fileFinded = true;
+                                string tempString = String.Format("{0},{1},{2},{3},{4}", args[0], args[1], args[2], args[3], args[4] + "\n");
                                 sw.Write(tempString);
                             }
                         }
                     }
+                    if (fileFinded == false)
+                    {
+                        Console.WriteLine("Не удалось найти сотрудника с данным ID");
+                    }
                 }
-                File.Delete(path);
-                File.Copy(temp, path);
+                File.Delete(_path);
+                File.Copy(temp, _path);
                 File.Delete(temp);
             }
             else
             {
-                Console.WriteLine("Файла базы нет. Добавьте сотрудников в базу");
+                Console.WriteLine("Файл базы данных не найден или пустой. Добавьте сотрудников в базу!");
             }
-            
-        }
-        public int CountLines()
-        {
-            var linesCount = 1;
-            int nextLine = '\n';
-            using (var streamReader = new StreamReader(
-                new BufferedStream(
-                    File.OpenRead(path), 10 * 1024 * 1024)))
-            {
-                while (!streamReader.EndOfStream)
-                {
-                    if (streamReader.Read() == nextLine) linesCount++;
-                }
-            }
-            return linesCount;
         }
     }
 }

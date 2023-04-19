@@ -10,21 +10,21 @@ namespace PracticalWork7_8
 {
     internal class Program
     {
-        static private string codeOfOperation = "waitCode";
+        static private string _codeOfOperation = "waitCode";
         static readonly string path = @"base.csv";
         static Repository reposit = new Repository(path);
         static void Main(string[] args)
         {
             
-            while (codeOfOperation != "0")
+            while (_codeOfOperation != "0")
             {
                 Console.WriteLine("\n0 - Выход, 1: Добавить сотрудника, 2: Вывести все записи, 3: Поиск сотрудника, 4: Удалить запись по ID\n");
                 Console.Write("Введите команду: ");
-                codeOfOperation = Console.ReadLine();
-                bool success = int.TryParse(codeOfOperation, out _);
+                _codeOfOperation = Console.ReadLine();
+                bool success = int.TryParse(_codeOfOperation, out _);
                 if (success)
                 {
-                    switch (Convert.ToInt32(codeOfOperation))
+                    switch (Convert.ToInt32(_codeOfOperation))
                     {
                         case 0:
                             Console.WriteLine("Работа с приложением завершена");
@@ -35,7 +35,8 @@ namespace PracticalWork7_8
                             break;
                         case 2:
                             Console.WriteLine("Вывести все записи: ");
-                            reposit.PrintAllWorkers(reposit.ParseFile(path));
+                            reposit.PrintTitles();
+                            reposit.PrintAllWorkers();
                             break;
                         case 3:
                             SearchWorker();
@@ -66,19 +67,22 @@ namespace PracticalWork7_8
             DateTime dateOfBirth = Convert.ToDateTime(Console.ReadLine());
             byte age = Convert.ToByte(Convert.ToInt64((DateTime.Now.Date - dateOfBirth.Date).TotalDays) / 365);
             Console.WriteLine($"Возраст: {age}");
-            Worker worker = new Worker(newID, fullName, dateOfBirth, age);
+            DateTime dateOfCreate = DateTime.Now;
+            Console.WriteLine(dateOfCreate);
+            Console.ReadKey();
+            Worker worker = new Worker(newID, dateOfCreate, fullName, dateOfBirth, age);
             reposit.Add(worker);
         }
 
         static void SearchWorker()
         {
-            Console.WriteLine("Поиск по полю: 1- ID, 2- ФИО, 3- По возрасту ");
+            Console.WriteLine("Поиск по полю: 1- ID, 2- ФИО, 3- По возрасту, 4- По диапазону дат");
             Console.Write("Код поля: ");
-            codeOfOperation = Console.ReadLine();
-            bool success = int.TryParse(codeOfOperation, out _);
+            _codeOfOperation = Console.ReadLine();
+            bool success = int.TryParse(_codeOfOperation, out _);
             if (success)
             {
-                switch (Convert.ToInt32(codeOfOperation))
+                switch (Convert.ToInt32(_codeOfOperation))
                 {
                     case 0:
                         Console.WriteLine("В главное меню");
@@ -86,17 +90,35 @@ namespace PracticalWork7_8
                     case 1:
                         Console.WriteLine("Ищем по ID");
                         string id = Console.ReadLine();
-                        reposit.SearchWorker(id, reposit.ParseFile(path));
+                        reposit.PrintTitles();
+                        reposit.SearchWorker(id);
                         break;
                     case 2:
                         Console.WriteLine("Ищем по ФИО ");
                         string name = Console.ReadLine();
-                        reposit.SearchWorker(name, reposit.ParseFile(path));
+                        reposit.PrintTitles();
+                        reposit.SearchWorker(name);
                         break;
                     case 3:
                         Console.WriteLine("Ищем возрасту");
                         string age = Console.ReadLine();
-                        reposit.SearchWorker(age, reposit.ParseFile(path));
+                        reposit.PrintTitles();
+                        reposit.SearchWorker(age);
+                        break;
+                    case 4:
+                        Console.WriteLine("Ищем записи в диапазоне дат рождения:");
+                        Console.Write("С даты: ");
+                        string fromDate = Console.ReadLine();
+                        Console.Write("По дату: ");
+                        string toDate = Console.ReadLine();
+                        if (DateTime.TryParse(fromDate, out _) && (DateTime.TryParse(toDate, out _)))
+                        {
+                            reposit.SearchWorkerByDateToDate(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
+                        }
+                        else
+                        {
+                            Console.WriteLine("Неверный формат даты. Проверьте водимые значения!");
+                        }    
                         break;
                     default:
                         Console.WriteLine("Такой команды нет");
