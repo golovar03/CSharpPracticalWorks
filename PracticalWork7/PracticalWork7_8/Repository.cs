@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,44 +14,13 @@ namespace PracticalWork7_8
         private Worker[] workers;
         private string path;
         int index;
-        string[] titles;
+        //string[] titles;
         public Repository(string Path)
         {
             this.path = Path;
             this.index = 0;
-            this.titles = new string[2];
+            //this.titles = new string[4];
             this.workers = new Worker[2];
-        }
-        public void PrintAllWorkers(string path)
-        {
-            if (File.Exists(path))
-            {
-                using (StreamReader sr = new StreamReader(path))
-                {
-                    titles = sr.ReadLine().Split(',');
-                    for (int i = 0; i < titles.Length; i++)
-                    {
-                        Console.Write("{0,26}", titles[i]);
-                    }
-                    Console.WriteLine();
-                    while (!sr.EndOfStream)
-                    {
-                        string[] args = sr.ReadLine().Split(',');
-                        for (int i = 0; i < args.Length; i++)
-                        {
-                            Console.Write("{0,22}",args[i]);
-                        }
-                        Console.WriteLine();
-                    }
-                }
-            }
-            else
-            {
-                using (StreamWriter sw = File.AppendText(path))
-                {
-                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст");
-                }
-            }
         }
 
         private void Resize(bool flag)
@@ -63,10 +33,10 @@ namespace PracticalWork7_8
 
         public void Add(Worker concreteWorker)
         {
-            string titles = String.Format("{0},{1},{2},{3}", "ID", "ФИО", "Дата рождения", "Возраст");
+            //string titles = String.Format("{0},{1},{2},{3}", "ID", "ФИО", "Дата рождения", "Возраст");
             this.Resize(index >= this.workers.Length);
             this.workers[index] = concreteWorker;
-            string inputData = String.Format("{0},{1},{2},{3}", "\n" + this.workers[index].ID, this.workers[index].FullName, this.workers[index].DateOfBirth, this.workers[index].Age);
+            string inputData = String.Format("{0},{1},{2},{3}", workers[index].ID, workers[index].FullName, workers[index].DateOfBirth, workers[index].Age);
             if (File.Exists(path))
             {
                 using (StreamWriter sw = File.AppendText(path))
@@ -78,45 +48,30 @@ namespace PracticalWork7_8
             {
                 using (StreamWriter sw = new StreamWriter(new FileStream(path, FileMode.Create), Encoding.UTF8))//File.AppendText(path))
                 {
-                    sw.Write(titles);
+                    //sw.Write(titles);
                     sw.Write(inputData);
                 }
             }
             this.index++;
         }
 
-        public void SearchWorker(string Path, string param)
+        public String[,] ParseFile(string Path)
         {
+            int dataLines = CountLines();
+            string[,] data = new string[dataLines, 4];
+            StreamReader sr = null;
             if (File.Exists(path))
             {
-                using (StreamReader sr = new StreamReader(path))
+                using (sr = new StreamReader(path))
                 {
-                    titles = sr.ReadLine().Split(',');
-                    for (int i = 0; i < titles.Length; i++)
-                    {
-                        Console.Write($"{titles[i]}\t");
-                    }
-                    Console.WriteLine();
                     while (!sr.EndOfStream)
                     {
-                        string[] args = sr.ReadLine().Split(',');
-                        for (int i = 0; i < args.Length; i++)
+                        for (int j = 0; j < dataLines; j++)
                         {
-                            for (int j = 0; j < this.workers.Length; j++)
+                            string[] args = sr.ReadLine().Split(',');
+                            for (int i = 0; i < args.Length; i++)
                             {
-                                this.workers[j] = new Worker(args[0], args[1], DateTime.Parse(args[2]), Convert.ToInt32(args[3]));
-                                //this.workers[j].ID = args[0];
-                                //this.workers[j].FullName = args[1];
-                                //this.workers[j].DateOfBirth = DateTime.Parse(args[2]);
-                                //this.workers[j].Age = Convert.ToInt32(args[3]);
-                            }
-                        }
-                        foreach (Worker worker in this.workers)
-                        {
-                            if (worker.FullName == param)
-                            {
-                                worker.Print(worker);
-                                break;
+                                data[j, i] = args[i];
                             }
                         }
                     }
@@ -126,11 +81,113 @@ namespace PracticalWork7_8
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
-                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст,");
+                    sw.WriteLine("ID,ФИО,Дата рождения,Возраст");
+                }
+            }
+            return data;
+        }
+
+        public void SearchWorker(string param, string[,] data)
+        {
+            int lines = data.GetLength(0);
+            int columns = data.GetLength(1);
+            bool success = false;
+            for (int i = 0; i < lines; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (i == 0)
+                    {
+                        Console.Write("{0,26}", data[0, j]);
+                    }
+                    if (data[i, j] == param)
+                    {
+                        Console.WriteLine();
+                        for (j = 0; j < columns; j++)
+                        {
+                            Console.Write("{0,26}", data[i, j]);
+                        }
+                        success = true;
+                    }
+                }
+            }
+            Console.WriteLine();
+            if (success == false)
+            {
+                Console.WriteLine("\nЗапись с указанными параметрами поиска не найдена. Попробуйте изменить параметры.");
+            }
+        }
+
+        public void PrintAllWorkers(string[,] data)
+        {
+            int lines = data.GetLength(0);
+            int columns = data.GetLength(1);
+            for (int i = 0; i < lines; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j == columns - 1)
+                    {
+                        Console.Write("{0,26}", data[i, j] + "\n");
+                    }
+                    else
+                    {
+                        Console.Write("{0,26}", data[i, j]);
+                    }
                 }
             }
         }
 
+        public void DeleteWorkerByID(string workerID)
+        {
+            string searchID = workerID;
+            string temp = @"temp.csv";
+
+            if (File.Exists(path))
+            {
+                using (StreamWriter sw = File.AppendText(temp))
+                {
+                    using (var streamReader = new StreamReader(
+                                                new BufferedStream(
+                                                    File.OpenRead(path), 10 * 1024 * 1024)))
+                    {
+                        while (!streamReader.EndOfStream)
+                        {
+                            string[] args = streamReader.ReadLine().Split(',');
+
+                            if (args[0] != searchID)
+                            {
+                                string tempString = String.Format("{0},{1},{2},{3}", args[0], args[1], args[2], args[3]);
+                                sw.Write(tempString);
+                            }
+                        }
+                    }
+                }
+                File.Delete(path);
+                File.Copy(temp, path);
+                File.Delete(temp);
+            }
+            else
+            {
+                Console.WriteLine("Файла базы нет. Добавьте сотрудников в базу");
+            }
+            
+        }
+        public int CountLines()
+        {
+            var linesCount = 1;
+            int nextLine = '\n';
+            using (var streamReader = new StreamReader(
+                new BufferedStream(
+                    File.OpenRead(path), 10 * 1024 * 1024)))
+            {
+                while (!streamReader.EndOfStream)
+                {
+                    if (streamReader.Read() == nextLine) linesCount++;
+                }
+            }
+            return linesCount;
+        }
     }
 }
 

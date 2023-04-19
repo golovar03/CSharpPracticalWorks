@@ -23,7 +23,7 @@ namespace PracticalWork7_8
 
         public void Print(Worker worker)
         {
-            Console.WriteLine($"{worker._id}\t{worker._fullName}\t{worker._dateOfBirth}\t{worker._age}");  
+            Console.WriteLine("{0,22}{1,22}{2,22}{3,22}", worker._id, worker._fullName, worker._dateOfBirth, worker._age);  
         }
 
         public string ID { get { return _id; } }

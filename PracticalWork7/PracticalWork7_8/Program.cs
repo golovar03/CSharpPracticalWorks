@@ -35,10 +35,15 @@ namespace PracticalWork7_8
                             break;
                         case 2:
                             Console.WriteLine("Вывести все записи: ");
-                            reposit.PrintAllWorkers(path);
+                            reposit.PrintAllWorkers(reposit.ParseFile(path));
                             break;
                         case 3:
                             SearchWorker();
+                            break;
+                        case 4:
+                            Console.Write("Удаляем запись по с ID: ");
+                            string id = Console.ReadLine();
+                            reposit.DeleteWorkerByID(id);
                             break;
                         default:
                             Console.WriteLine("Такой команды нет");
@@ -67,7 +72,7 @@ namespace PracticalWork7_8
 
         static void SearchWorker()
         {
-            Console.WriteLine("Поиск по полю: 1- ID, 2- ФИО, 3- Дата рождения ");
+            Console.WriteLine("Поиск по полю: 1- ID, 2- ФИО, 3- По возрасту ");
             Console.Write("Код поля: ");
             codeOfOperation = Console.ReadLine();
             bool success = int.TryParse(codeOfOperation, out _);
@@ -80,15 +85,18 @@ namespace PracticalWork7_8
                         break;
                     case 1:
                         Console.WriteLine("Ищем по ID");
-                        //CreateWorkwer();
+                        string id = Console.ReadLine();
+                        reposit.SearchWorker(id, reposit.ParseFile(path));
                         break;
                     case 2:
                         Console.WriteLine("Ищем по ФИО ");
                         string name = Console.ReadLine();
-                        reposit.SearchWorker(path, name);
+                        reposit.SearchWorker(name, reposit.ParseFile(path));
                         break;
                     case 3:
-                        Console.WriteLine("Ищем по дате рождения");
+                        Console.WriteLine("Ищем возрасту");
+                        string age = Console.ReadLine();
+                        reposit.SearchWorker(age, reposit.ParseFile(path));
                         break;
                     default:
                         Console.WriteLine("Такой команды нет");
