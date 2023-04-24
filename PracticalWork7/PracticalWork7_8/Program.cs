@@ -113,6 +113,7 @@ namespace PracticalWork7_8
                         string toDate = Console.ReadLine();
                         if (DateTime.TryParse(fromDate, out _) && (DateTime.TryParse(toDate, out _)))
                         {
+                            reposit.PrintTitles();
                             reposit.SearchWorkerByDateToDate(Convert.ToDateTime(fromDate), Convert.ToDateTime(toDate));
                         }
                         else

@@ -105,7 +105,7 @@ namespace PracticalWork7_8
                         {
                             for (int i = 0; i < args.Length; i++)
                             {
-                                if (Convert.ToDateTime(args[2]) >= fromDate && Convert.ToDateTime(args[2]) <= toDate)
+                                if (Convert.ToDateTime(args[3]) >= fromDate && Convert.ToDateTime(args[3]) <= toDate)
                                 {
                                     success = true;
                                     string printString = String.Format("{0,23}{1,23}{2,23}{3,20}{4,12}", args[0], args[1], args[2], args[3], args[4]);

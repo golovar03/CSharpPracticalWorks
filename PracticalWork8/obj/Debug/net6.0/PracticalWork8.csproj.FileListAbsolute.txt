@@ -1,0 +1,15 @@
+D:\STUDY\C#\С#SkillBox\PracticalWork8\bin\Debug\net6.0\PracticalWork8.exe
+D:\STUDY\C#\С#SkillBox\PracticalWork8\bin\Debug\net6.0\PracticalWork8.deps.json
+D:\STUDY\C#\С#SkillBox\PracticalWork8\bin\Debug\net6.0\PracticalWork8.runtimeconfig.json
+D:\STUDY\C#\С#SkillBox\PracticalWork8\bin\Debug\net6.0\PracticalWork8.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork8\bin\Debug\net6.0\PracticalWork8.pdb
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.csproj.AssemblyReference.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.AssemblyInfoInputs.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.AssemblyInfo.cs
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.csproj.CoreCompileInputs.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\refint\PracticalWork8.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.pdb
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\PracticalWork8.genruntimeconfig.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\obj\Debug\net6.0\ref\PracticalWork8.dll
