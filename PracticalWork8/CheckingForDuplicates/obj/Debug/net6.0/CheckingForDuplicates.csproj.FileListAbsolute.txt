@@ -1,0 +1,15 @@
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\bin\Debug\net6.0\CheckingForDuplicates.exe
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\bin\Debug\net6.0\CheckingForDuplicates.deps.json
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\bin\Debug\net6.0\CheckingForDuplicates.runtimeconfig.json
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\bin\Debug\net6.0\CheckingForDuplicates.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\bin\Debug\net6.0\CheckingForDuplicates.pdb
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.csproj.AssemblyReference.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.AssemblyInfoInputs.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.AssemblyInfo.cs
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.csproj.CoreCompileInputs.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\refint\CheckingForDuplicates.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.pdb
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\CheckingForDuplicates.genruntimeconfig.cache
+D:\STUDY\C#\С#SkillBox\PracticalWork8\CheckingForDuplicates\obj\Debug\net6.0\ref\CheckingForDuplicates.dll
