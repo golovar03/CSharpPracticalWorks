@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "brRK/kKYREzwq9ba2ZiunYC+CGzASp7tnehLKJzpflvnsxbUN/yzweotlu/iGQ60n50HALPbFYbW0J1KCaP0TA==",
+  "dgSpecHash": "TX35eVBTmTkNUlqWTQrpz+wC/alpcbGKovWl9A0N8ck6NM57xqlfm4uyIstmR7/LTLTmEfKJ+VvPc/25556BFw==",
   "success": true,
-  "projectFilePath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
+  "projectFilePath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

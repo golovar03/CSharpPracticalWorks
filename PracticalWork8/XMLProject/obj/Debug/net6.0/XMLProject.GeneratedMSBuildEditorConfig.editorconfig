@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = ListAndDictionary
-build_property.ProjectDir = E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\ListAndDictionary\
+build_property.RootNamespace = XMLProject
+build_property.ProjectDir = E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\

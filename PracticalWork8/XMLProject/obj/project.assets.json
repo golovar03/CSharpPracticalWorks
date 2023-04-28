@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
-      "projectName": "CheckingForDuplicates(HashSet)",
-      "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
+      "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\XMLProject.csproj",
+      "projectName": "XMLProject",
+      "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\XMLProject.csproj",
       "packagesPath": "C:\\Users\\Odzunu\\.nuget\\packages\\",
-      "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\obj\\",
+      "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Odzunu\\AppData\\Roaming\\NuGet\\NuGet.Config",

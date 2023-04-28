@@ -6,7 +6,7 @@ namespace CheckingForDuplicates
     {
         static void Main(string[] args)
         {
-            HashSet<int> Myset = new HashSet<int>();
+            HashSet<int> mySet = new HashSet<int>();
             Console.WriteLine("Вводите числа. После ввода каждого числа, нажмите 'Enter'");
             while (Console.ReadKey(true).Key != ConsoleKey.Escape) 
             {
@@ -14,9 +14,9 @@ namespace CheckingForDuplicates
                 string value = Console.ReadLine();
                 if (!String.IsNullOrEmpty(value) & Int32.TryParse(value, out _))
                 {
-                    if (!Myset.Contains(Convert.ToInt32(value)))
+                    if (!mySet.Contains(Convert.ToInt32(value)))
                     {
-                        Myset.Add(Convert.ToInt32(value));
+                        mySet.Add(Convert.ToInt32(value));
                         Console.WriteLine($"Число {value} успешно добавлено в коллекцию!");
                         continue;
                     }

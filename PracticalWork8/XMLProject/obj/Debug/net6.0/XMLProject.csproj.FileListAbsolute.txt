@@ -1,0 +1,15 @@
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\bin\Debug\net6.0\XMLProject.exe
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\bin\Debug\net6.0\XMLProject.deps.json
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\bin\Debug\net6.0\XMLProject.runtimeconfig.json
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\bin\Debug\net6.0\XMLProject.dll
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\bin\Debug\net6.0\XMLProject.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.csproj.AssemblyReference.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.GeneratedMSBuildEditorConfig.editorconfig
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.AssemblyInfoInputs.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.AssemblyInfo.cs
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.csproj.CoreCompileInputs.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.dll
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\refint\XMLProject.dll
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.pdb
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\XMLProject.genruntimeconfig.cache
+E:\UNITY\C#\CSharpPracticalWorks\PracticalWork8\XMLProject\obj\Debug\net6.0\ref\XMLProject.dll

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {}
+    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {}
   },
   "projects": {
-    "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {
+    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
+        "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
         "projectName": "CheckingForDuplicates(HashSet)",
-        "projectPath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
-        "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\obj\\",
+        "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
+        "packagesPath": "C:\\Users\\Odzunu\\.nuget\\packages\\",
+        "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Odzunu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj": {}
+    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\XMLProject.csproj": {}
   },
   "projects": {
-    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj": {
+    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\XMLProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj",
-        "projectName": "ListAndDictionary",
-        "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj",
+        "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\XMLProject.csproj",
+        "projectName": "XMLProject",
+        "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\XMLProject.csproj",
         "packagesPath": "C:\\Users\\Odzunu\\.nuget\\packages\\",
-        "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\obj\\",
+        "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\XMLProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Odzunu\\AppData\\Roaming\\NuGet\\NuGet.Config",
