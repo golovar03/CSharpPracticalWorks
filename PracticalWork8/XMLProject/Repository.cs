@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using System.Xml.Linq;
+using System.ComponentModel.Design;
 
 namespace XMLProject
 {
@@ -19,20 +20,39 @@ namespace XMLProject
 
         public static void AddPerson(List<Person> concretePerson)
         {
-            XDocument xDoc = XDocument.Load("XML_Base.xml");
-            XElement? root = xDoc.Element("Persons");
-            Stream writer = new FileStream(_path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-
-            root?.Add(new XElement("Persons", concretePerson.Select(p => new XElement("Person", new XAttribute("name", p.FullName),
-                             new XElement("Address",
-                             new XElement("Street", p.Street),
-                             new XElement("Home", p.Home),
-                             new XElement("Apartment", p.Apartment)),
-                             new XElement("Phones",
-                             new XElement("MobilePhone", p.MobilePhone),
-                             new XElement("HomePhone", p.HomePhone))))));
-            xDoc.Save(writer);
-            writer.Close();
+            if (!File.Exists(_path))
+            {
+                XDocument xDoc = new(new XElement("Persons", concretePerson.Select(p => new XElement("Person", new XAttribute("name", p.FullName),
+                           new XElement("Address",
+                           new XElement("Street", p.Street),
+                           new XElement("Home", p.Home),
+                           new XElement("Apartment", p.Apartment)),
+                           new XElement("Phones",
+                           new XElement("MobilePhone", p.MobilePhone),
+                           new XElement("HomePhone", p.HomePhone))))));
+                xDoc.Save(_path);
+            }
+            else
+            {
+                XDocument xDoc = XDocument.Load(_path);
+                XElement? root = xDoc.Element("Persons");
+                if (root != null)
+                    {
+                        root?.Add(concretePerson.Select(p => new XElement("Person", new XAttribute("name", p.FullName),
+                                 new XElement("Address",
+                                 new XElement("Street", p.Street),
+                                 new XElement("Home", p.Home),
+                                 new XElement("Apartment", p.Apartment)),
+                                 new XElement("Phones",
+                                 new XElement("MobilePhone", p.MobilePhone),
+                                 new XElement("HomePhone", p.HomePhone)))));
+                    xDoc.Save(_path);
+                }
+                else
+                {
+                    Console.WriteLine("Обнаружено нарушение структуры файла базы. Возможно файл поврежден.");
+                }
+            }
         }
     }
 }

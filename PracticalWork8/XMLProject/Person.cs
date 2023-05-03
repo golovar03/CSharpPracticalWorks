@@ -20,11 +20,11 @@ namespace XMLProject
         {
             Console.Write("ФИО: ");
             FullName = Console.ReadLine();
-            Console.Write("Улицу: ");
+            Console.Write("Улица: ");
             Street = Console.ReadLine();
-            Console.Write("Введите номер дома: ");
+            Console.Write("Номер дома: ");
             Home = Console.ReadLine();
-            Console.Write("Введите номер квартиры: ");
+            Console.Write("Номер квартиры: ");
             Apartment = Console.ReadLine();
             Console.Write("Номер сотового телефона: ");
             MobilePhone = Console.ReadLine();

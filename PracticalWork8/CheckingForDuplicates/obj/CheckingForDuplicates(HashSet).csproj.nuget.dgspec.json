@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {}
+    "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {}
   },
   "projects": {
-    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {
+    "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
+        "projectUniqueName": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
         "projectName": "CheckingForDuplicates(HashSet)",
-        "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
-        "packagesPath": "C:\\Users\\Odzunu\\.nuget\\packages\\",
-        "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\CheckingForDuplicates\\obj\\",
+        "projectPath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\CheckingForDuplicates(HashSet).csproj",
+        "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
+        "outputPath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\CheckingForDuplicates\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Odzunu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

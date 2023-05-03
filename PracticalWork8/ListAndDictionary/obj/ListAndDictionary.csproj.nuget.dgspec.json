@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj": {}
+    "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj": {}
   },
   "projects": {
-    "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj": {
+    "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj",
+        "projectUniqueName": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj",
         "projectName": "ListAndDictionary",
-        "projectPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj",
-        "packagesPath": "C:\\Users\\Odzunu\\.nuget\\packages\\",
-        "outputPath": "E:\\UNITY\\C#\\CSharpPracticalWorks\\PracticalWork8\\ListAndDictionary\\obj\\",
+        "projectPath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\ListAndDictionary\\ListAndDictionary.csproj",
+        "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
+        "outputPath": "D:\\STUDY\\C#\\С#SkillBox\\PracticalWork8\\ListAndDictionary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Odzunu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

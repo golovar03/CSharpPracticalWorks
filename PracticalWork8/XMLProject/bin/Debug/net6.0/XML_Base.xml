@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Persons>
+  <Person name="Иванов Иван Иванович">
+    <Address>
+      <Street>Иванова</Street>
+      <Home>1</Home>
+      <Apartment>2</Apartment>
+    </Address>
+    <Phones>
+      <MobilePhone>8-888-888-88-88</MobilePhone>
+      <HomePhone>88-88-88</HomePhone>
+    </Phones>
+  </Person>
+  <Person name="Семенов Семен Семенович">
+    <Address>
+      <Street>Семенова</Street>
+      <Home>2</Home>
+      <Apartment>1</Apartment>
+    </Address>
+    <Phones>
+      <MobilePhone>7-777-777-77-77</MobilePhone>
+      <HomePhone>77-77-77</HomePhone>
+    </Phones>
+  </Person>
+  <Person name="Петров Петр Петрович">
+    <Address>
+      <Street>Петрова</Street>
+      <Home>12</Home>
+      <Apartment>13</Apartment>
+    </Address>
+    <Phones>
+      <MobilePhone>8-666-666-66-66</MobilePhone>
+      <HomePhone>66-66-66</HomePhone>
+    </Phones>
+  </Person>
+</Persons>

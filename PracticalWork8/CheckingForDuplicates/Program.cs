@@ -6,9 +6,9 @@ namespace CheckingForDuplicates
     {
         static void Main(string[] args)
         {
-            HashSet<int> mySet = new HashSet<int>();
+            HashSet<int> mySet = new();
             Console.WriteLine("Вводите числа. После ввода каждого числа, нажмите 'Enter'");
-            while (Console.ReadKey(true).Key != ConsoleKey.Escape) 
+            while (Console.ReadKey(true).Key != ConsoleKey.Escape)
             {
                 Console.Write("Число: ");
                 string value = Console.ReadLine();
@@ -30,9 +30,7 @@ namespace CheckingForDuplicates
                     Console.WriteLine("Введеное значение пустое или не является целым числом!");
                     continue;
                 }
-                
             }
-            
         }
     }
 }

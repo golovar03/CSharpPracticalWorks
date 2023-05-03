@@ -20,12 +20,11 @@ namespace PracticalWork8
             {
                 Console.WriteLine($"Запись с номером {phoneNumber} уже присутствует в базе!\n");
             }
-            
         }
 
         public void DeleteSubscriber(string phoneNumber)
         {
-            if(phoneBook.ContainsKey(phoneNumber))
+            if (phoneBook.ContainsKey(phoneNumber))
             {
                 Console.WriteLine($"Удален пользователь с номером телефона {phoneNumber}");
                 phoneBook.Remove(phoneNumber);
@@ -50,10 +49,10 @@ namespace PracticalWork8
 
         public void PrintAllSubscribes()
         {
-            foreach (KeyValuePair<string,string> pairs in phoneBook)
+            foreach (KeyValuePair<string, string> pairs in phoneBook)
             {
                 Console.WriteLine($"{pairs} ");
-            } 
+            }
         }
     }
 }

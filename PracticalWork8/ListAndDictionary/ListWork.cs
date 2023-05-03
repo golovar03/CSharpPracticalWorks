@@ -4,8 +4,8 @@ namespace PracticalWork8
 {
     internal class ListWork
     {
-        private List<int> _intValues = new List<int>();
-        
+        private List<int> _intValues = new();
+
         public List<int> CompleteTheList() // заполняем список значенимями от 0 до 100
         {
             Random random = new();
@@ -16,7 +16,7 @@ namespace PracticalWork8
             }
             return _intValues;
         }
-        
+
         public void PrintList(List<int> list) // принимаем список в качестве параметра и выводим на экран
         {
             foreach (var item in list)

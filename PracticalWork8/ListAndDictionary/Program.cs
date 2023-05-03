@@ -13,7 +13,7 @@ namespace PracticalWork8
                 Console.WriteLine("Введите номер задачи.\n1- Работа со списком\t2- Телефонный справочник\tEsc- Выход из приложения");
                 Console.Write("Ваш выбор: ");
                 string codeOfOperation = Console.ReadLine();
-                if(!String.IsNullOrEmpty(codeOfOperation) & Int32.TryParse(codeOfOperation, out _))
+                if (!String.IsNullOrEmpty(codeOfOperation) & Int32.TryParse(codeOfOperation, out _))
                 {
                     switch (Convert.ToInt32(codeOfOperation))
                     {
@@ -35,7 +35,6 @@ namespace PracticalWork8
                 {
                     Console.WriteLine("Вы ввели неверный код операции или пустое значение. Повторите ввод!");
                 }
-                
             }
         }
 
