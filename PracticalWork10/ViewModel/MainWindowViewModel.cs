@@ -9,7 +9,7 @@ namespace PracticalWork10.ViewModel
 {
     internal class MainWindowViewModel : ViewModelBase
     {
-        private string _title = "Главное окно";
+        private string _title = "Клиент";
         /// <summary> Задание и вывод заголовка главного окна </summary>
         public string Title 
         { 
