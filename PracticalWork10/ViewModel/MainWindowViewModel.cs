@@ -9,12 +9,22 @@ namespace PracticalWork10.ViewModel
 {
     internal class MainWindowViewModel : ViewModelBase
     {
+        /// <summary>заголовок программы</summary>
         private string _title = "Клиент";
+        /// <summary>статус выполнения программы</summary>
+        private string _status = "Ok!";
+
         /// <summary> Задание и вывод заголовка главного окна </summary>
         public string Title 
         { 
             get => _title;
             set=> Set(ref _title, value);
+        }
+
+        public string Status
+        {
+            get => _status;
+            set =>  Set(ref _status, value);
         }
     }
 }

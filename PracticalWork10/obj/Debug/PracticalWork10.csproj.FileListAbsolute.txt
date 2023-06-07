@@ -17,3 +17,4 @@ D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\View\Windows\MainWindow.baml
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\View\Windows\TableWindow.g.cs
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\View\Windows\TableWindow.baml
+D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\PracticalWork10_Content.g.cs

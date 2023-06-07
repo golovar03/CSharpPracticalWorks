@@ -34,7 +34,7 @@
                    Height="{Binding ElementName=MainMenu, Path=Height}"
                    Background="{Binding ElementName=MainMenu, Path=Background}"
                    Foreground="{Binding ElementName=MainMenu, Path=Foreground}">
-            <TextBlock Text="Какой-то статус"
+            <TextBlock Text="{Binding Status}"
                        FontSize="11"
                        VerticalAlignment="Top"></TextBlock>
         </StatusBar>
@@ -58,6 +58,15 @@
                     BorderBrush="#FF063A69"
                     Margin="10">
                     <DataGrid x:Name="DBClienTable">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding SecondName}" Width="*"/>
+                            <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*"/>
+                            <DataGridTextColumn Header="Отчество" Binding="{Binding LastName}" Width="*"/>
+                            <DataGridTextColumn Header="Номер паспорта" Binding="{Binding PassportNumber}" Width="110"/>
+                            <DataGridTextColumn Header="Номер телефона" Binding="{Binding PhoneNumber}" Width="110"/>
+                            <DataGridTextColumn Header="Дата изменения" Binding="{Binding EditDataTime}" Width="110"/>
+                            <DataGridTextColumn Header="Комментарий" Binding="{Binding Comment}" Width="200"/>
+                        </DataGrid.Columns>
                     </DataGrid>
                 </Border>
             </Grid>
