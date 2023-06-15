@@ -18,17 +18,8 @@
               Height="20"
               FontSize="13"
               Background="#FF0C5DA5"
-              Foreground="White"
-              >
+              Foreground="White">
             <MenuItem Header="Файл">
-                <MenuItem Header="Панель консультанта"
-                          Foreground="{Binding ElementName=MainMenu, Path=Foreground}"
-                          Background="{Binding ElementName=MainMenu, Path=Background}">
-                </MenuItem>
-                <MenuItem Header="Панель администратора"
-                          Foreground="{Binding ElementName=MainMenu, Path=Foreground}"
-                          Background="{Binding ElementName=MainMenu, Path=Background}">
-                </MenuItem>
             </MenuItem>
             <MenuItem Header="О программе"></MenuItem>
             <MenuItem Header="Выход"></MenuItem>

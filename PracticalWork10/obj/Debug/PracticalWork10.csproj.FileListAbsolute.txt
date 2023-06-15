@@ -17,4 +17,9 @@ D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\View\Windows\MainWindow.baml
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\View\Windows\TableWindow.g.cs
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\View\Windows\TableWindow.baml
-D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\PracticalWork10_Content.g.cs
+D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\EntityFramework.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\EntityFramework.SqlServer.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\EntityFramework.xml
+D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\EntityFramework.SqlServer.xml
+D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\ru\EntityFramework.resources.dll
+D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\PracticalWork10.csproj.CopyComplete

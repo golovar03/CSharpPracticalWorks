@@ -12,7 +12,7 @@
         ResizeMode="NoResize"
         Background="#FF0C5DA5">
     <Window.DataContext>
-        <vm:TableViewModel/>
+        <vm:TableWindowViewModel/>
     </Window.DataContext>
     <DockPanel>
         <Menu x:Name="MainMenu" DockPanel.Dock="Top" 

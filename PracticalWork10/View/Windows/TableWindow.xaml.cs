@@ -1,5 +1,4 @@
-﻿using PracticalWork10.Data.DataModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +22,6 @@ namespace PracticalWork10.View.Windows
         public TableWindow()
         {
             InitializeComponent();
-            DBClienTable.ItemsSource = WorkDBEntities.GetContext().Clients.ToList();
         }
     }
 }
