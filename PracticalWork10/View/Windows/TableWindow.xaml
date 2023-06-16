@@ -10,7 +10,7 @@
         Height="450" 
         Width="800"
         ResizeMode="NoResize"
-        Background="#FF0C5DA5">
+        Background="#FF0C5DA5" Loaded="Window_Loaded">
     <Window.DataContext>
         <vm:TableWindowViewModel/>
     </Window.DataContext>

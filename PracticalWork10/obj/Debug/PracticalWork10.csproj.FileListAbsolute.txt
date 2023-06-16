@@ -23,3 +23,4 @@ D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\EntityFramework.xml
 D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\EntityFramework.SqlServer.xml
 D:\STUDY\C#\С#SkillBox\PracticalWork10\bin\Debug\ru\EntityFramework.resources.dll
 D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\PracticalWork10.csproj.CopyComplete
+D:\STUDY\C#\С#SkillBox\PracticalWork10\obj\Debug\PracticalWork10_Content.g.cs

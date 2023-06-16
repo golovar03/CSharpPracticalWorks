@@ -1,6 +1,9 @@
 ﻿using PracticalWork10.ViewModel.Base;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
@@ -33,6 +36,5 @@ namespace PracticalWork10.ViewModel
             set => Set(ref _status, value);
         }
         #endregion
-
     }
 }
